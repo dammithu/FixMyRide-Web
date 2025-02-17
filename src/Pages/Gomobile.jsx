@@ -1,4 +1,5 @@
 import React from 'react';
+import gomobile from "../assets/img/gomobile.png"
 
 const LandingPage = () => {
   return (
@@ -40,8 +41,17 @@ const LandingPage = () => {
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-6 bg-gray-800 rounded-b-2xl"></div>
             
             {/* App Screen Content */}
-            <div className="h-full w-full p-4 bg-gradient-to-b from-green-600 to-green-700 rounded-[32px]">
-              <div className="mt-8 text-white">
+            <div className="h-full w-full p-4 rounded-[32px] overflow-hidden relative">
+              {/* Background Image */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center"
+                style={{
+                  backgroundImage: {gomobile},
+                  filter: 'brightness(0.7)'
+                }}
+              ></div>
+              
+              <div className="relative z-10 mt-8 text-white">
                 <div className="flex items-center justify-between mb-4">
                   <span>9:41</span>
                   <div className="flex items-center gap-2">
@@ -57,8 +67,11 @@ const LandingPage = () => {
                 {/* App Interface */}
                 <div className="space-y-4 mt-12">
                   <div className="flex justify-center">
-                    <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
-                      <span className="text-2xl font-bold">S</span>
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-blue-600 to-indigo-600">
+                      <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                      </svg>
                     </div>
                   </div>
                   <h2 className="text-center text-xl font-semibold mt-4">
@@ -68,13 +81,27 @@ const LandingPage = () => {
                     in advance
                   </p>
                   <div className="space-y-3 mt-8">
-                    <div className="bg-white bg-opacity-20 p-3 rounded-lg">
-                      Enter Pickup Location / Airport
+                    <div className="bg-white rounded-lg flex items-center p-3">
+                      <svg className="w-5 h-5 text-gray-400 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                      </svg>
+                      <input 
+                        type="text"
+                        placeholder="Enter Pickup Location / Airport"
+                        className="w-full bg-transparent text-gray-700 placeholder-gray-400 focus:outline-none"
+                      />
                     </div>
-                    <div className="bg-white bg-opacity-20 p-3 rounded-lg">
-                      Enter Drop-off Location / Airport
+                    <div className="bg-white rounded-lg flex items-center p-3">
+                      <svg className="w-5 h-5 text-gray-400 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                      </svg>
+                      <input 
+                        type="text"
+                        placeholder="Enter Drop-off Location / Airport"
+                        className="w-full bg-transparent text-gray-700 placeholder-gray-400 focus:outline-none"
+                      />
                     </div>
-                    <button className="w-full bg-blue-500 text-white py-3 rounded-lg mt-4">
+                    <button className="w-full bg-blue-500 text-white py-3 rounded-lg mt-4 font-medium">
                       REQUEST A TAXI
                     </button>
                   </div>

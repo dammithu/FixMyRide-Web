@@ -5,7 +5,7 @@ import { MapPin, Car, DollarSign } from 'lucide-react';
 import BookingSteps from "./BookingSteps";
 import FareEstimate from "./FareEstimate";
 import WhyChooseSmartzi from "./WhyChooseSmartzi";
-import BusinessLanding from "./BusinessLanding";
+import Lorem from "./Lorem";
 import SignUpNav from "./SignUpNav";
 import Gomobile from "./Gomobile"
 
@@ -65,7 +65,7 @@ const LandingPage = () => {
     <BookingSteps/>
     <FareEstimate/>
     <WhyChooseSmartzi/>
-    <BusinessLanding/>
+    <Lorem/>
     <SignUpNav/>
     <Gomobile/>
     </div>

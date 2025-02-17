@@ -48,13 +48,13 @@ const Navbar = () => {
           LOCAL TRIP
         </a>
         <a
-          href="#driver"
+          href="/driver"
           className="text-gray-500 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#caf6c4]"
         >
           DRIVER
         </a>
         <a
-          href="#business"
+          href="/business"
           className="text-gray-500 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#caf6c4]"
         >
           BUSINESS
@@ -74,13 +74,13 @@ const Navbar = () => {
           {isOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
               <a
-                href="#about"
+                href="/aboutus"
                 className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-700 hover:bg-[#caf6c4]"
               >
                 ABOUT US
               </a>
               <a
-                href="#contact"
+                href="/contactus"
                 className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-700 hover:bg-[#caf6c4]"
               >
                 CONTACT US
@@ -122,13 +122,13 @@ const Navbar = () => {
             LOCAL TRIP
           </a>
           <a
-            href="#driver"
+            href="/driver"
             className="text-gray-500 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#caf6c4]"
           >
             DRIVER
           </a>
           <a
-            href="#business"
+            href=""
             className="text-gray-500 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#caf6c4]"
           >
             BUSINESS
