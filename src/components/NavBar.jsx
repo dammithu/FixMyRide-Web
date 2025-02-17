@@ -74,13 +74,13 @@ const Navbar = () => {
           {isOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
               <a
-                href="/aboutus"
+                href="#about"
                 className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-700 hover:bg-[#caf6c4]"
               >
                 ABOUT US
               </a>
               <a
-                href="/contactus"
+                href="#contact"
                 className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-700 hover:bg-[#caf6c4]"
               >
                 CONTACT US
@@ -96,12 +96,14 @@ const Navbar = () => {
         </div>
 
         {/* Auth Buttons */}
-        <button className="text-gray-600 hover:text-gray-800 px-4 py-2 rounded-full border border-gray-300 text-sm">
+        <a href="/login"> <button className="text-gray-600 hover:text-gray-800 px-4 py-2 rounded-full border border-gray-300 text-sm">
           LOGIN
         </button>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 text-sm">
+        </a>
+        <a href="/signup"><button className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 text-sm">
           SIGN UP
         </button>
+        </a>
       </div>
     </div>
 
@@ -128,7 +130,7 @@ const Navbar = () => {
             DRIVER
           </a>
           <a
-            href=""
+            href="/business"
             className="text-gray-500 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#caf6c4]"
           >
             BUSINESS
@@ -156,12 +158,14 @@ const Navbar = () => {
 
           {/* Mobile Auth Buttons */}
           <div className="flex flex-col space-y-2 pt-2">
-            <button className="text-gray-600 hover:text-gray-800 px-4 py-2 rounded-full border border-gray-300 text-sm w-full">
+            <a href="/login"><button className="text-gray-600 hover:text-gray-800 px-4 py-2 rounded-full border border-gray-300 text-sm w-full">
               LOGIN
             </button>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 text-sm w-full">
+            </a>
+            <a href="/signup"><button className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 text-sm w-full">
               SIGN UP
             </button>
+            </a>
           </div>
         </div>
       </div>
@@ -172,4 +176,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar;
