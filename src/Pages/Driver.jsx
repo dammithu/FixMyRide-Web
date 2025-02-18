@@ -6,6 +6,7 @@ import DriverBenefits from './DriverBenefits';
 import HeroSection from './HeroSection';
 import TestimonialSlider from './TestimonialSlider';
 import DriverRequirements from './DriverRequirements';
+import FAQSection from './FAQSection';
 
 const DriverSignup = () => {
   const [phone, setPhone] = React.useState('');
@@ -150,6 +151,7 @@ const DriverSignup = () => {
     <HeroSection/>
     <DriverRequirements/>
     <TestimonialSlider/>
+    <FAQSection/>
     </div>
   );
 };
