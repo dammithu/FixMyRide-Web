@@ -1,57 +1,82 @@
-import React from 'react';
+import React from "react";
 
 const PurpleSection = () => {
   return (
-    <div className="min-h-screen w-full bg-[#1A1B3B]">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-16">
+    <div className="min-h-screen w-full bg-[#1e1a4a] py-32">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between gap-20">
           {/* Left Column */}
-          <div className="text-white">
-            <h2 className="text-4xl font-light mb-2 tracking-wide">
-              EXCEPTIONAL TRAVEL
-              <br />
-              FOR{' '}
-              <span className="font-bold">
-                BUSINESSES OF
-                <br />
-                ALL SIZES
-              </span>
-            </h2>
-            <p className="text-gray-300 mt-6 leading-relaxed max-w-xl text-sm">
-              Competitive fixed fares and flexible invoicing. Easy travel management, view and
-              manage users, bookings and invoices in one place. Travel safety and support for your
-              employees. Our online service and app are simple, secure and quick to use.
-            </p>
-          </div>
+          <div className="text-white md:w-1/2 text-right">
+  <div className="inline-block w-full">
+    <h2 className="text-5xl font-light mb-2 tracking-wide leading-tight">
+      EXCEPTIONAL TRAVEL FOR{" "}
+      <span className="font-bold text-white">
+        BUSINESSES OF
+        <br />
+        <span className="text-white">ALL SIZES</span>
+      </span>
+    </h2>
+  </div>
+  
+  <p className="text-gray-300 mt-4 leading-relaxed w-full text-base text-right">
+    Competitive fixed fares and flexible
+    <br />
+    invoicing. Easy travel management: view and
+    <br />
+    manage users, bookings, and invoices in one
+    <br />
+    place. Travel safety and support for your
+    <br />
+    employees. Our online service and app are
+    <br />
+    simple, secure, and quick to use.
+  </p>
+</div>
+
 
           {/* Right Column */}
-          <div className="space-y-8">
+          <div className="space-y-16 md:w-1/2">
             <div>
-              <h3 className="text-white font-bold mb-3 tracking-wide text-sm">FIXED FARES</h3>
-              <p className="text-gray-300 leading-relaxed text-sm">
+              <h3 className="text-white font-bold mb-4 tracking-wide text-base uppercase">
+                FIXED FARES
+              </h3>
+              <p className="text-gray-400 leading-relaxed text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor. Posuimus id labore et dolore magna
+                <br />
+                do eiusmod tempor incididunt ut labore et dolore magna
+                <br />
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                <br />
                 ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
 
             <div>
-              <h3 className="text-white font-bold mb-3 tracking-wide text-sm">FIXED FARES</h3>
-              <p className="text-gray-300 leading-relaxed text-sm">
+              <h3 className="text-white font-bold mb-4 tracking-wide text-base uppercase">
+                FIXED FARES
+              </h3>
+              <p className="text-gray-400 leading-relaxed text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor. Posuimus id labore et dolore magna
+                <br />
+                do eiusmod tempor incididunt ut labore et dolore magna
+                <br />
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                <br />
                 ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
 
             <div>
-              <h3 className="text-white font-bold mb-3 tracking-wide text-sm">FIXED FARES</h3>
-              <p className="text-gray-300 leading-relaxed text-sm">
+              <h3 className="text-white font-bold mb-4 tracking-wide text-base uppercase">
+                FIXED FARES
+              </h3>
+              <p className="text-gray-400 leading-relaxed text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor. Posuimus id labore et dolore magna
+                <br />
+                do eiusmod tempor incididunt ut labore et dolore magna
+                <br />
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                <br />
                 ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
