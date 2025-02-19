@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import img1 from "../assets/img/home2.jpg";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -10,29 +11,29 @@ import FAQSection from "./FAQSection";
 
 const DriverSignup = () => {
   const [phone, setPhone] = React.useState("");
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission
+    navigate("/pending"); // Redirect to /pending
+  };
 
   return (
     <div>
       <div className="min-h-screen relative overflow-hidden">
         {/* Background with full image and dark angled bottom */}
         <div className="absolute inset-0 z-0">
-          {/* Full image background */}
           <div className="absolute inset-0">
             <img
               src={img1}
               alt="Background"
               className="w-full h-full object-cover"
             />
-            {/* Purple overlay */}
             <div className="absolute inset-0 bg-indigo-900/30"></div>
           </div>
-
-          {/* Dark angled bottom */}
           <div
             className="absolute bottom-0 left-0 w-full h-1/3 bg-[#1e1a4a]"
-            style={{
-              clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 60%)",
-            }}
+            style={{ clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 60%)" }}
           />
         </div>
 
@@ -53,7 +54,7 @@ const DriverSignup = () => {
 
           {/* Right Form */}
           <div className="bg-white rounded-2xl p-8 w-full max-w-md shadow-xl mr-16">
-            <form className="space-y-3 mr-5 ml-5 ">
+            <form className="space-y-3 mr-5 ml-5" onSubmit={handleSubmit}>
               <input
                 type="text"
                 placeholder="First Name"
@@ -72,7 +73,7 @@ const DriverSignup = () => {
                 className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm"
               />
 
-              {/* Updated Phone Input */}
+              {/* Phone Input */}
               <div className="phone-input-container">
                 <PhoneInput
                   country={"gb"}

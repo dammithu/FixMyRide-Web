@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import SafetyCommitment from './SafetyCommitment';
 import BookingSteps from "./BookingSteps";
 import FAQSection from "./FAQSection";
@@ -9,29 +10,25 @@ import img1 from "../assets/img/home2.jpg"
 
 const RiderSignup = () => {
   const [phone, setPhone] = React.useState('');
+  const navigate = useNavigate(); // Initialize navigation
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission
+    navigate('/payment'); // Redirect to payment page
+  };
 
   return (
     <>
       <div className="min-h-screen relative overflow-hidden">
         {/* Background with full image and dark angled bottom */}
         <div className="absolute inset-0 z-0">
-          {/* Full image background */}
           <div className="absolute inset-0">
-            <img
-              src={img1}
-              alt="Background"
-              className="w-full h-full object-cover"
-            />
-            {/* Purple overlay */}
+            <img src={img1} alt="Background" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-indigo-900/30"></div>
           </div>
-
-          {/* Dark angled bottom */}
           <div
             className="absolute bottom-0 left-0 w-full h-1/3 bg-[#1e1a4a]"
-            style={{
-              clipPath: 'polygon(0 100%, 100% 100%, 100% 0, 0 60%)'
-            }}
+            style={{ clipPath: 'polygon(0 100%, 100% 100%, 100% 0, 0 60%)' }}
           />
         </div>
 
@@ -41,31 +38,16 @@ const RiderSignup = () => {
           <div className="text-white max-w-xl pt-12 ml-20 p-10">
             <h1 className="text-5xl font-bold mb-4">Our promise towards a safer everyday</h1>
             <p className="text-lg text-gray-200">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-              ut labore et dolore magna aliqua. Ut enim ad.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.
             </p>
           </div>
 
           {/* Right Form */}
           <div className="bg-white rounded-2xl p-8 w-full max-w-md shadow-xl mr-16">
-            <form className="space-y-3 mr-5 ml-5">
-              <input
-                type="text"
-                placeholder="First Name"
-                className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm"
-              />
-
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm"
-              />
-
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm"
-              />
+            <form className="space-y-3 mr-5 ml-5" onSubmit={handleSubmit}>
+              <input type="text" placeholder="First Name" className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm" />
+              <input type="text" placeholder="Last Name" className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm" />
+              <input type="email" placeholder="Email" className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm" />
 
               {/* Phone Input */}
               <div className="phone-input-container">
@@ -87,23 +69,12 @@ const RiderSignup = () => {
                     border: 'none',
                     borderRadius: '0.5rem 0 0 0.5rem'
                   }}
-                  containerStyle={{
-                    width: '100%'
-                  }}
+                  containerStyle={{ width: '100%' }}
                 />
               </div>
 
-              <input
-                type="password"
-                placeholder="Password"
-                className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm"
-              />
-
-              <input
-                type="password"
-                placeholder="Confirm Password"
-                className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm"
-              />
+              <input type="password" placeholder="Password" className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm" />
+              <input type="password" placeholder="Confirm Password" className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm" />
 
               {/* Terms and conditions text */}
               <div className="space-y-2 mt-4">
@@ -121,7 +92,7 @@ const RiderSignup = () => {
                   </span>
                 </label>
               </div>
-
+              
               <button
                 type="submit"
                 className="w-full bg-blue-500 text-white py-2.5 rounded-lg font-semibold hover:bg-blue-600 transition mt-4 text-sm"

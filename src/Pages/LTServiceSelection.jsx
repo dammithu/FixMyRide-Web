@@ -160,12 +160,15 @@ const LTServiceSelection = () => {
           </div>
 
           <div className="flex justify-center">
+            <a href="">
             <button
+              
               type="submit"
               className="px-8 py-3 bg-blue-500 text-white font-semibold rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 text-lg"
             >
               BOOK NOW
             </button>
+            </a>
           </div>
         </form>
       </div>
