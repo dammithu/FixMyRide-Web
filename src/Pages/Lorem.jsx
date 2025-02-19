@@ -60,15 +60,16 @@ const LandingPage = () => {
       <div className="grid md:grid-cols-2 gap-12 py-16 mt-17">
         {/* About Us Section */}
         <div className="space-y-4 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-        <Users className="w-6 h-6 text-indigo-900" />
+          <Users className="w-6 h-6 text-indigo-900" />
 
           <div className="flex items-center space-x-3 text-indigo-900">
             <h2 className="text-xl font-semibold">About Us</h2>
           </div>
           <p className="text-gray-600 leading-relaxed">
-            Smartzi is a company that mediates between travelers and providers
-            of passenger transport. Smartzi is created to give their drivers a
-            fair chance on creating their own customer... network.
+            Fix My Ride is a company that mediates between travelers and
+            providers of passenger transport. Fix My Ride is created to give
+            their drivers a fair chance on creating their own customer...
+            network.
           </p>
           <button
             className="px-6 py-2 border border-indigo-900 text-indigo-900 rounded-full 
@@ -86,9 +87,10 @@ const LandingPage = () => {
             <h2 className="text-xl font-semibold">Latest News</h2>
           </div>
           <p className="text-gray-600 leading-relaxed">
-            Smartzi is a company that mediates between travelers and providers
-            of passenger transport. Smartzi is created to give their drivers a
-            fair chance on creating their own customer... network.
+            Fix My Ride is a company that mediates between travelers and
+            providers of passenger transport. Fix My Ride is created to give
+            their drivers a fair chance on creating their own customer...
+            network.
           </p>
           <button
             className="px-6 py-2 border border-indigo-900 text-indigo-900 rounded-full 

@@ -1,39 +1,37 @@
-import React from 'react';
+import React from "react";
 
 const DriverRequirements = () => {
   const requirements = [
     {
       icon: "18+",
       title: "Age",
-      description: "You have to be over 18 years of age with a valid driver's license to drive with Smartzi."
+      description:
+        "You have to be over 18 years of age with a valid driver's license to drive with Fix My Ride.",
     },
     {
       icon: "📱",
       title: "Smartphone",
-      description: "You will need an iOS or Android device to receive bookings on our app."
+      description:
+        "You will need an iOS or Android device to receive bookings on our app.",
     },
     {
       icon: "🚗",
       title: "Car",
-      description: "Depending on the city you want to work in, your car must meet some requirements."
+      description:
+        "Depending on the city you want to work in, your car must meet some requirements.",
     },
     {
       icon: "🔍",
       title: "Screening",
-      description: "The screening process may include drug tests, police reports, credit checks etc."
-    }
+      description:
+        "The screening process may include drug tests, police reports, credit checks etc.",
+    },
   ];
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-b from-indigo-900 to-indigo-800 py-20">
       Angled Overlay
-      <div 
-        className="absolute inset-0 bg-white "
-        style={{
-          
-        }}
-      />
-
+      <div className="absolute inset-0 bg-white " style={{}} />
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-indigo-950 mb-16">
@@ -50,9 +48,7 @@ const DriverRequirements = () => {
                 <h3 className="font-semibold text-lg text-indigo-950 mb-2">
                   {req.title}
                 </h3>
-                <p className="text-gray-600 text-sm">
-                  {req.description}
-                </p>
+                <p className="text-gray-600 text-sm">{req.description}</p>
               </div>
             </div>
           ))}

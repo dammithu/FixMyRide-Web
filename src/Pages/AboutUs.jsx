@@ -37,7 +37,7 @@ const AboutPage = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent">
           <div className="absolute bottom-20 left-20">
             <h1 className="text-5xl font-bold text-white mb-6">
-              About Smartzi
+              About Fix My Ride
             </h1>
             <p className="text-white/90 text-lg max-w-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -102,7 +102,10 @@ const AboutPage = () => {
           <div className="p-16 flex flex-col justify-center bg-white">
             <div className="flex items-center mb-6">
               <div className="h-[1px] bg-gray-300 w-16"></div>
-              <h2 className="text-2xl font-bold text-gray-800 px-4 "style={{ color: "#5c5784" }}>
+              <h2
+                className="text-2xl font-bold text-gray-800 px-4 "
+                style={{ color: "#5c5784" }}
+              >
                 OUR PHILOSOPHY
               </h2>
               <div className="h-[1px] bg-gray-300 w-16"></div>
@@ -125,18 +128,21 @@ const AboutPage = () => {
           <div className="p-16 flex flex-col justify-center bg-white">
             <div className="flex items-center mb-6">
               <div className="h-[1px] bg-gray-300 w-16"></div>
-              <h2 className="text-2xl font-bold text-gray-800 px-4" style={{ color: "#5c5784" }}>
+              <h2
+                className="text-2xl font-bold text-gray-800 px-4"
+                style={{ color: "#5c5784" }}
+              >
                 BETTER FOR RIDERS
               </h2>
               <div className="h-[1px] bg-gray-300 w-16"></div>
             </div>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Smartzi gives you low prices because we work locally with drivers
-              to keep our costs low. And we use the most flexible system in
-              London they're always just a phone call or click away. Best of all
-              we allow you to choose your favourite driver - up to four drivers
-              chosen by you. So add to your smart circle, save them in the App
-              and choose them next time. It's that easy.
+              Fix My Ride gives you low prices because we work locally with
+              drivers to keep our costs low. And we use the most flexible system
+              in London they're always just a phone call or click away. Best of
+              all we allow you to choose your favourite driver - up to four
+              drivers chosen by you. So add to your smart circle, save them in
+              the App and choose them next time. It's that easy.
             </p>
 
             <button className="bg-blue-500 text-white px-10 py-3 rounded-full w-fit hover:bg-blue-600 transition-colors">
@@ -166,23 +172,26 @@ const AboutPage = () => {
           <div className="p-16 flex flex-col justify-center bg-white">
             <div className="flex items-center mb-6">
               <div className="h-[1px] bg-gray-300 w-16"></div>
-              <h2 className="text-2xl font-bold text-gray-800 px-4" style={{ color: "#5c5784" }}>
+              <h2
+                className="text-2xl font-bold text-gray-800 px-4"
+                style={{ color: "#5c5784" }}
+              >
                 BETTER FOR DRIVERS
               </h2>
               <div className="h-[1px] bg-gray-300 w-16"></div>
             </div>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Private hire Drivers love Smartzi because they get control over
-              the way they work and low commission on well customer rides. The
-              Preferred Driver feature allows Drivers to build and manage their
-              own network of customers simply and easily. Personal business
-              cards, special offers and access to tried and tested kit all
-              combine into a great toolkit for Drivers.
+              Private hire Drivers love Fix My Ride because they get control
+              over the way they work and low commission on well customer rides.
+              The Preferred Driver feature allows Drivers to build and manage
+              their own network of customers simply and easily. Personal
+              business cards, special offers and access to tried and tested kit
+              all combine into a great toolkit for Drivers.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Smartzi is also marketing hard and bringing more and more rides to
-              the platform. We are strong in South West London and growing. Get
-              signed today!
+              Fix My Ride is also marketing hard and bringing more and more
+              rides to the platform. We are strong in South West London and
+              growing. Get signed today!
             </p>
             <button className="bg-blue-500 text-white px-10 py-3 rounded-full w-fit hover:bg-blue-600 transition-colors">
               SIGN UP TO DRIVE

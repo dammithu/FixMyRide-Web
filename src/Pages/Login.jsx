@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import img1 from "../assets/img/rider login.jpg"
-import img2 from "../assets/img/driver login.jpg"
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import img1 from "../assets/img/rider login.jpg";
+import img2 from "../assets/img/driver login.jpg";
 
 const LoginSelection = () => {
   const [showModal, setShowModal] = useState(false);
-  const [loginType, setLoginType] = useState('');
+  const [loginType, setLoginType] = useState("");
   const navigate = useNavigate();
 
   const openModal = (type) => {
@@ -16,10 +16,12 @@ const LoginSelection = () => {
   return (
     <div className="relative min-h-screen w-full flex">
       {/* Close button */}
-      <button 
+      <button
         className="absolute top-6 right-6 text-gray-500 hover:text-gray-700 z-10"
-        onClick={() => navigate('/')}
-      >        <svg
+        onClick={() => navigate("/")}
+      >
+        {" "}
+        <svg
           className="w-6 h-6"
           fill="none"
           stroke="currentColor"
@@ -54,14 +56,14 @@ const LoginSelection = () => {
                   Rider Login
                 </h2>
                 <p className="text-gray-700 mb-2">
-                Lorem ipsum dolor sit amet, consectetur <br/>
-                adipiscing elit, sed do eiusmod tempor                
+                  Lorem ipsum dolor sit amet, consectetur <br />
+                  adipiscing elit, sed do eiusmod tempor
                 </p>
               </div>
-              <button 
+              <button
                 className="mt-1 flex-shrink-0 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors group relative"
                 aria-label="Login"
-                onClick={() => openModal('rider')}
+                onClick={() => openModal("rider")}
               >
                 <div className="absolute inset-0 bg-blue-500 rounded-full transition-transform group-hover:scale-95"></div>
                 <svg
@@ -104,14 +106,14 @@ const LoginSelection = () => {
                   Driver Login
                 </h2>
                 <p className="text-gray-700 mb-2">
-                Lorem ipsum dolor sit amet, consectetur <br/>
-                adipiscing elit, sed do eiusmod tempor
-               </p>
+                  Lorem ipsum dolor sit amet, consectetur <br />
+                  adipiscing elit, sed do eiusmod tempor
+                </p>
               </div>
-              <button 
+              <button
                 className="mt-1 flex-shrink-0 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors group relative"
                 aria-label="Login"
-                onClick={() => openModal('driver')}
+                onClick={() => openModal("driver")}
               >
                 <div className="absolute inset-0 bg-blue-500 rounded-full transition-transform group-hover:scale-95"></div>
                 <svg
@@ -159,7 +161,7 @@ const LoginSelection = () => {
 
             <div className="text-center">
               <h2 className="text-xl font-medium text-gray-900 mb-8">
-                WELCOME BACK TO SMARTZI
+                WELCOME BACK TO Fix My Ride
               </h2>
 
               <form className="space-y-5">
@@ -189,7 +191,7 @@ const LoginSelection = () => {
                   UPDATE PASSWORD
                 </button>
                 <div className="text-sm text-gray-600">
-                  Don't have an account yet?{' '}
+                  Don't have an account yet?{" "}
                   <a href="#" className="text-blue-500 font-medium">
                     REGISTER NOW
                   </a>
