@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';
-import Gomobile from "./Gomobile"
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+import Gomobile from "./Gomobile";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -132,132 +132,144 @@ const ContactForm = () => {
 
   return (
     <div>
-    <div className="bg-gray-100 min-h-screen flex flex-col items-center">
-      <style>{phoneInputStyles}</style>
-      
-      <div className="max-w-3xl w-full p-6 mt-10">
-        <h2 className="text-2xl font-medium text-indigo-800 mb-6">
-          CONTACT US
-        </h2>
+      <div className="bg-gray-100 min-h-screen flex flex-col items-center">
+        <style>{phoneInputStyles}</style>
 
-        <div className="bg-white rounded-lg shadow-sm p-10 mt-10">
-          <form onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <input
-                type="text"
-                name="firstName"
-                placeholder="Your first name"
-                value={formData.firstName}
-                onChange={handleChange}
-                className="w-full h-12 px-4 py-3 rounded-full bg-gray-100 border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
+        <div className="max-w-3xl w-full p-6 mt-10">
+          <h2 className="text-2xl font-medium text-indigo-800 mb-6">
+            CONTACT US
+          </h2>
 
-              <input
-                type="text"
-                name="lastName"
-                placeholder="Your last name"
-                value={formData.lastName}
-                onChange={handleChange}
-                className="w-full h-12 px-4 py-3 rounded-full bg-gray-100 border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
+          <div className="bg-white rounded-lg shadow-sm p-10 mt-10">
+            <form onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="Your first name"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  className="w-full h-12 px-4 py-3 rounded-full bg-gray-100 border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full h-12 px-4 py-3 rounded-full bg-gray-100 border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-
-              <div className="relative">
-                <PhoneInput
-                  country={'gb'}
-                  value={formData.phone}
-                  onChange={handlePhoneChange}
-                  inputProps={{
-                    name: 'phone',
-                    required: true,
-                    placeholder: 'Phone Number'
-                  }}
-                  enableSearch={true}
-                  searchPlaceholder="Search countries"
-                  searchClass="search-box"
-                  containerClass="react-tel-input"
-                  inputClass="form-control"
-                  buttonClass="flag-dropdown"
-                  dropdownClass="country-list"
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Your last name"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  className="w-full h-12 px-4 py-3 rounded-full bg-gray-100 border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
                 />
               </div>
-            </div>
 
-            <div className="mb-4">
-              <input
-                type="text"
-                name="title"
-                placeholder="Title of your message"
-                value={formData.title}
-                onChange={handleChange}
-                className="w-full h-12 px-4 py-3 rounded-full bg-gray-100 border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full h-12 px-4 py-3 rounded-full bg-gray-100 border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
 
-            <div className="mb-6">
-              <textarea
-                name="message"
-                placeholder="Your message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={6}
-                className="w-full px-4 py-3 rounded-3xl bg-gray-100 border-none focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-                required
-              ></textarea>
-            </div>
-
-            <div className="flex justify-start">
-              <button
-                type="submit"
-                className="px-36 py-3 text-white bg-blue-500 rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 uppercase font-medium"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
-        
-        <div className="mt-16 pb-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <p className="text-gray-700 font-medium text-lg">Smartzi Limited</p>
-              <p className="text-gray-600 font-medium text-lg">14 Elm Road, Chessington</p>
-              <p className="text-gray-600 font-medium text-lg">KT91AW</p>
-              <p className="text-gray-600 font-medium text-lg mb-4">United Kingdom</p>
-              
-              <p className="text-gray-500 text-sm">Company Registration Number: 09261921</p>
-            </div>
-            
-            <div>
-              <div className="mb-6">
-                <p className="text-gray-700 font-medium text-lg">Hot Line</p>
-                <p className="text-gray-600 font-medium text-lg">+44 3300252525</p>
+                <div className="relative">
+                  <PhoneInput
+                    country={"gb"}
+                    value={formData.phone}
+                    onChange={handlePhoneChange}
+                    inputProps={{
+                      name: "phone",
+                      required: true,
+                      placeholder: "Phone Number",
+                    }}
+                    enableSearch={true}
+                    searchPlaceholder="Search countries"
+                    searchClass="search-box"
+                    containerClass="react-tel-input"
+                    inputClass="form-control"
+                    buttonClass="flag-dropdown"
+                    dropdownClass="country-list"
+                  />
+                </div>
               </div>
-              
+
+              <div className="mb-4">
+                <input
+                  type="text"
+                  name="title"
+                  placeholder="Title of your message"
+                  value={formData.title}
+                  onChange={handleChange}
+                  className="w-full h-12 px-4 py-3 rounded-full bg-gray-100 border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+
+              <div className="mb-6">
+                <textarea
+                  name="message"
+                  placeholder="Your message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={6}
+                  className="w-full px-4 py-3 rounded-3xl bg-gray-100 border-none focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                  required
+                ></textarea>
+              </div>
+
+              <div className="flex justify-start">
+                <button
+                  type="submit"
+                  className="px-36 py-3 text-white bg-blue-500 rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 uppercase font-medium"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div className="mt-16 pb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <p className="text-gray-700 font-medium text-lg">Email</p>
-                <p className="text-gray-600 font-medium text-lg">info@smartzi.com</p>
+                <p className="text-gray-700 font-medium text-lg">
+                  Fix My Ride Limited
+                </p>
+                <p className="text-gray-600 font-medium text-lg">
+                  14 Elm Road, Chessington
+                </p>
+                <p className="text-gray-600 font-medium text-lg">KT91AW</p>
+                <p className="text-gray-600 font-medium text-lg mb-4">
+                  United Kingdom
+                </p>
+
+                <p className="text-gray-500 text-sm">
+                  Company Registration Number: 09261921
+                </p>
+              </div>
+
+              <div>
+                <div className="mb-6">
+                  <p className="text-gray-700 font-medium text-lg">Hot Line</p>
+                  <p className="text-gray-600 font-medium text-lg">
+                    +44 3300252525
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-gray-700 font-medium text-lg">Email</p>
+                  <p className="text-gray-600 font-medium text-lg">
+                    info@Fix My Ride.com
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <Gomobile/>
+      <Gomobile />
     </div>
   );
 };

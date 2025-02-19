@@ -40,7 +40,9 @@ const DriverSignup = () => {
           <div className="flex justify-between items-start pt-8">
             {/* Left content */}
             <div className="text-white max-w-xl ml-20 p-10">
-              <h1 className="text-5xl font-bold mb-4">Drive with Smartzi</h1>
+              <h1 className="text-5xl font-bold mb-4">
+                Drive with Fix My Ride
+              </h1>
               <h2 className="text-3xl font-semibold mb-6">
                 Make money on your schedule
               </h2>

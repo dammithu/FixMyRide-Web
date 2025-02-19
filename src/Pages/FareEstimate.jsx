@@ -1,15 +1,15 @@
-import React from 'react';
-import { Square, Circle } from 'lucide-react';
-import img1 from "../assets/img/home1.jpg"
+import React from "react";
+import { Square, Circle } from "lucide-react";
+import img1 from "../assets/img/home1.jpg";
 
 const FareEstimate = () => {
   return (
     <div className="relative min-h-screen">
       {/* Background Image with Luxury Car */}
       <div className="absolute inset-0">
-        <img 
-          src={img1} 
-          alt="Luxury car with driver" 
+        <img
+          src={img1}
+          alt="Luxury car with driver"
           className="w-full h-full object-cover"
         />
         {/* Purple Overlay */}
@@ -24,9 +24,11 @@ const FareEstimate = () => {
             Estimate Your Fare
           </h1>
           <p className="text-gray-200 text-lg leading-relaxed">
-            Smartzi is set up to be the cheapest every day option - no matter if you pre-book or order on demand. 
-            Check our pricing calculator but keep in mind we let our drivers set their own rates - so you should pay 
-            even less. Your price will be fixed and set before you ride - no surprises and no surge pricing.
+            Fix My Ride is set up to be the cheapest every day option - no
+            matter if you pre-book or order on demand. Check our pricing
+            calculator but keep in mind we let our drivers set their own rates -
+            so you should pay even less. Your price will be fixed and set before
+            you ride - no surprises and no surge pricing.
           </p>
         </div>
 
@@ -36,7 +38,11 @@ const FareEstimate = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Pickup Input */}
               <div className="bg-green-50 rounded-lg flex items-center px-4 py-3">
-                <Square size={20} className="text-green-600 mr-3" strokeWidth={1.5} />
+                <Square
+                  size={20}
+                  className="text-green-600 mr-3"
+                  strokeWidth={1.5}
+                />
                 <input
                   type="text"
                   placeholder="Enter Pickup Location / Airport"
@@ -46,7 +52,11 @@ const FareEstimate = () => {
 
               {/* Drop-off Input */}
               <div className="bg-green-50 rounded-lg flex items-center px-4 py-3">
-                <Circle size={20} className="text-green-600 mr-3" strokeWidth={1.5} />
+                <Circle
+                  size={20}
+                  className="text-green-600 mr-3"
+                  strokeWidth={1.5}
+                />
                 <input
                   type="text"
                   placeholder="Enter Drop-off Location / Airport"

@@ -4,17 +4,12 @@ import car2 from "../assets/img/car2.png";
 import car3 from "../assets/img/car3.jpg";
 import car4 from "../assets/img/car4.png";
 
-const TripBookingForm = () => {
+const LTTripBookingForm = () => {
   const [tripType, setTripType] = useState("one-way");
   const [serviceType, setServiceType] = useState("standard");
-  const [outboundPassengers, setOutboundPassengers] = useState(1);
-  const [outboundLuggage, setOutboundLuggage] = useState("None");
-  const [inboundPassengers, setInboundPassengers] = useState(1);
-  const [inboundLuggage, setInboundLuggage] = useState("None");
   const [showVehicles, setShowVehicles] = useState(false);
   const [viaFields, setViaFields] = useState([]);
 
-  // Vehicle data with imported images
   const vehicles = [
     {
       id: 1,
@@ -57,30 +52,6 @@ const TripBookingForm = () => {
   return (
     <div className="flex justify-center items-center p-4">
       <div className="w-full max-w-md rounded-xl overflow-hidden bg-white">
-        {/* Trip Type Selection */}
-        <div className="flex text-center border-b">
-          <button
-            className={`flex-1 py-3 font-semibold ${
-              tripType === "one-way"
-                ? "text-black bg-gray-100"
-                : "text-gray-500"
-            }`}
-            onClick={() => setTripType("one-way")}
-          >
-            ONE WAY
-          </button>
-          <button
-            className={`flex-1 py-3 font-semibold ${
-              tripType === "round-trip"
-                ? "text-black bg-gray-100"
-                : "text-gray-500"
-            }`}
-            onClick={() => setTripType("round-trip")}
-          >
-            ROUND TRIP
-          </button>
-        </div>
-
         {/* Form Fields */}
         <div className="p-4 space-y-4">
           {/* Pickup and Drop-off */}
@@ -104,23 +75,38 @@ const TripBookingForm = () => {
               </div>
             </div>
 
-            {/* Plus sign */}
-            <div className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10">
-              <div className="w-2 h-2 border border-black bg-white flex items-center justify-center">
-                <span className="text-black font-bold text-[8px] leading-none">
-                  +
-                </span>
-              </div>
+            {/* VIA Fields Container */}
+            <div id="viaFields">
+              {viaFields.map((_, index) => (
+                <div
+                  key={index}
+                  className="flex items-center bg-[#caf7c5] rounded-full p-3 mb-5"
+                >
+                  <div className="relative w-8 flex justify-center mr-2">
+                    <div className="w-3 h-3 border border-black bg-white z-10"></div>
+                  </div>
+                  <div className="flex-grow flex items-center">
+                    <div className="text-sm text-indigo-900 font-semibold whitespace-nowrap mr-2">
+                      VIA :
+                    </div>
+                    <input
+                      className="w-full bg-transparent border-none focus:outline-none placeholder-gray-400 text-sm rounded-full"
+                      placeholder="Enter Via Location"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Add Pickup/Drop-off Point Button */}
-            {tripType === "one-way" && (
-              <div className="ml-10 mb-5">
-                <button className="text-sm text-gray-500 px-1 py-0.5 text-left">
-                  Add a pickup / drop-off point
-                </button>
-              </div>
-            )}
+            <div className="ml-10 mb-5">
+              <button
+                className="text-sm text-gray-500 px-1 py-0.5 text-left"
+                onClick={() => setViaFields([...viaFields, ""])}
+              >
+                Add a pickup / drop-off point
+              </button>
+            </div>
 
             {/* Drop-off */}
             <div className="flex items-center bg-[#caf7c5] rounded-full p-3">
@@ -135,81 +121,6 @@ const TripBookingForm = () => {
                   className="w-full bg-transparent border-none focus:outline-none placeholder-gray-400 text-sm rounded-full"
                   placeholder="Enter Drop-off Location / Airport"
                 />
-              </div>
-            </div>
-          </div>
-
-          {/* Outbound and Inbound */}
-          <div className="grid grid-cols-2 gap-4 mt-6">
-            <div>
-              <h3 className="text-indigo-900 font-semibold mb-2">OUTBOUND</h3>
-              <div className="flex space-x-2">
-                <div className="p-2 bg-gray-100 rounded-lg flex items-center">
-                  <span className="text-sm mr-1">👤</span>
-                  <select
-                    className="bg-transparent"
-                    value={outboundPassengers}
-                    onChange={(e) =>
-                      setOutboundPassengers(Number(e.target.value))
-                    }
-                  >
-                    {[1, 2, 3, 4, 5].map((num) => (
-                      <option key={num} value={num}>
-                        {num}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                <div className="p-2 bg-gray-100 rounded-lg flex items-center">
-                  <span className="text-sm mr-1">🧳</span>
-                  <select
-                    className="bg-transparent"
-                    value={outboundLuggage}
-                    onChange={(e) => setOutboundLuggage(e.target.value)}
-                  >
-                    <option value="None">None</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div className={tripType === "one-way" ? "opacity-50" : ""}>
-              <h3 className="text-indigo-900 font-semibold mb-2">INBOUND</h3>
-              <div className="flex space-x-2">
-                <div className="p-2 bg-gray-100 rounded-lg flex items-center">
-                  <span className="text-sm mr-1">👤</span>
-                  <select
-                    className="bg-transparent"
-                    value={inboundPassengers}
-                    onChange={(e) =>
-                      setInboundPassengers(Number(e.target.value))
-                    }
-                    disabled={tripType === "one-way"}
-                  >
-                    {[1, 2, 3, 4, 5].map((num) => (
-                      <option key={num} value={num}>
-                        {num}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                <div className="p-2 bg-gray-100 rounded-lg flex items-center">
-                  <span className="text-sm mr-1">🧳</span>
-                  <select
-                    className="bg-transparent"
-                    value={inboundLuggage}
-                    onChange={(e) => setInboundLuggage(e.target.value)}
-                    disabled={tripType === "one-way"}
-                  >
-                    <option value="None">None</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </div>
               </div>
             </div>
           </div>
@@ -242,7 +153,6 @@ const TripBookingForm = () => {
             </div>
           </div>
 
-          {/* Estimate Button */}
           <div className="mt-6">
             <button
               className="w-full bg-[#928eac] text-white py-3 rounded-lg font-medium hover:bg-[#008bde] transition-colors"
@@ -320,4 +230,4 @@ const TripBookingForm = () => {
   );
 };
 
-export default TripBookingForm;
+export default LTTripBookingForm;

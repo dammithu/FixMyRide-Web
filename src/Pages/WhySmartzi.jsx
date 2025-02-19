@@ -9,7 +9,7 @@ const DriverBenefits = () => {
           <h1 className="text-white text-5xl md:text-7xl font-bold leading-tight">
             WHY
             <br />
-            SMARTZI
+            Fix My Ride
           </h1>
         </div>
 

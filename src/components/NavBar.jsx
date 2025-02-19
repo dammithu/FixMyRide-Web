@@ -12,7 +12,10 @@ const Navbar = () => {
         {/* Main Navbar */}
         <div className="flex items-center justify-between">
           {/* Logo Section */}
-          <a href="/" className="flex items-center space-x-3 mx-5 cursor-pointer">
+          <a
+            href="/"
+            className="flex items-center space-x-3 mx-5 cursor-pointer"
+          >
             <img src={logo} alt="Fix My Ride Logo" className="w-12 h-12" />
             <span className="text-gray-700 font-semibold text-xl">
               Fix My Ride
@@ -42,7 +45,7 @@ const Navbar = () => {
               AIRPORT TRANSFER
             </a>
             <a
-              href="#local"
+              href="/local"
               className="text-gray-500 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#caf6c4]"
             >
               LOCAL TRIP
@@ -96,7 +99,7 @@ const Navbar = () => {
             </div>
 
             {/* Auth Buttons */}
-            <a href="/login"> 
+            <a href="/login">
               <button className="text-gray-600 hover:text-gray-800 px-4 py-2 rounded-full border border-gray-300 text-sm">
                 LOGIN
               </button>

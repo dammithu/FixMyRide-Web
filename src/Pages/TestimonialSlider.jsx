@@ -1,28 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import img1 from "../assets/img/home2.jpg";
 
 const TestimonialSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   const testimonials = [
     {
       name: "Dean Yamashita",
-      experience: "6 years experience with Smartzi",
-      quote: "A game changer. It allows our hotel to align to the needs of today's traveler.",
-      image: "/api/placeholder/400/400"
+      experience: "6 years experience with Fix My Ride",
+      quote:
+        "A game changer. It allows our hotel to align to the needs of today's traveler.",
+      image: "/api/placeholder/400/400",
     },
     {
       name: "Sarah Johnson",
-      experience: "4 years experience with Smartzi",
+      experience: "4 years experience with Fix My Ride",
       quote: "The perfect platform for modern transportation needs.",
-      image: "/api/placeholder/400/400"
+      image: "/api/placeholder/400/400",
     },
     {
       name: "Michael Chen",
-      experience: "5 years experience with Smartzi",
+      experience: "5 years experience with Fix My Ride",
       quote: "Changed the way I think about ride-sharing services.",
-      image: "/api/placeholder/400/400"
-    }
+      image: "/api/placeholder/400/400",
+    },
   ];
 
   return (
@@ -48,7 +49,7 @@ const TestimonialSlider = () => {
           <blockquote className="text-3xl font-semibold text-indigo-950 italic">
             "{testimonials[currentSlide].quote}"
           </blockquote>
-          
+
           <div className="space-y-2">
             <p className="font-medium text-gray-900">
               {testimonials[currentSlide].name}
@@ -71,9 +72,7 @@ const TestimonialSlider = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-2.5 h-2.5 rounded-full transition-all ${
-              currentSlide === index 
-                ? 'bg-blue-500' 
-                : 'bg-gray-300'
+              currentSlide === index ? "bg-blue-500" : "bg-gray-300"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

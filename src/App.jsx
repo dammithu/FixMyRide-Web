@@ -13,6 +13,10 @@ import RiderSignup from "./Pages/RiderSignup";
 import DriverSignup from "./Pages/DriverSignup";
 import Business from "./Pages/Business";
 import BookingInterface from "./components/BookingInterface";
+import ServiceSelection from "./Pages/ServiceSelection";
+import LTTripBooking from "./components/LTTripBooking";
+import LTServiceSelection from "./Pages/LTServiceSelection";
+import LocalTrip from "./Pages/LocalTrip";
 
 function App() {
   return (
@@ -28,7 +32,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/rider-signup" element={<RiderSignup />} />
         <Route path="/business" element={<Business />} />
-        <Route path="/bookinginterface" element={<BookingInterface />} />
+        <Route path="/serviceselection" element={<ServiceSelection />} />
+        <Route path="/localtrip" element={<LocalTrip />} />
+        <Route path="/ltserviceselection" element={<LTServiceSelection />} />
       </Routes>
       <Footer />
     </Router>
