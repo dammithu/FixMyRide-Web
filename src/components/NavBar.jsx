@@ -7,17 +7,20 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white shadow-sm px-6 py-5">
+    <nav className="w-full bg-white shadow-sm px-6 py-5 ">
       <div className="max-w-8xl mx-auto px-5">
         {/* Main Navbar */}
         <div className="flex items-center justify-between">
           {/* Logo Section */}
-          <div className="flex items-center space-x-3 mx-5">
+          <a
+            href="/"
+            className="flex items-center space-x-3 mx-5 cursor-pointer"
+          >
             <img src={logo} alt="Fix My Ride Logo" className="w-12 h-12" />
             <span className="text-gray-700 font-semibold text-xl">
               Fix My Ride
             </span>
-          </div>
+          </a>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
@@ -42,7 +45,7 @@ const Navbar = () => {
               AIRPORT TRANSFER
             </a>
             <a
-              href="localtrip"
+              href="/local"
               className="text-gray-500 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#caf6c4]"
             >
               LOCAL TRIP
@@ -74,13 +77,13 @@ const Navbar = () => {
               {isOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
                   <a
-                    href="#about"
+                    href="/aboutus"
                     className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-700 hover:bg-[#caf6c4]"
                   >
                     ABOUT US
                   </a>
                   <a
-                    href="#contact"
+                    href="/contactus"
                     className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-700 hover:bg-[#caf6c4]"
                   >
                     CONTACT US
@@ -97,7 +100,6 @@ const Navbar = () => {
 
             {/* Auth Buttons */}
             <a href="/login">
-              {" "}
               <button className="text-gray-600 hover:text-gray-800 px-4 py-2 rounded-full border border-gray-300 text-sm">
                 LOGIN
               </button>
@@ -115,13 +117,13 @@ const Navbar = () => {
           <div className="md:hidden mt-4 pb-4">
             <div className="flex flex-col space-y-4">
               <a
-                href="#airport"
+                href="/airport"
                 className="text-gray-500 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#caf6c4]"
               >
                 AIRPORT TRANSFER
               </a>
               <a
-                href="/localtrip"
+                href="#local"
                 className="text-gray-500 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#caf6c4]"
               >
                 LOCAL TRIP
@@ -141,13 +143,13 @@ const Navbar = () => {
 
               {/* Mobile More Menu Items */}
               <a
-                href="#about"
+                href="/aboutus"
                 className="text-gray-500 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#caf6c4]"
               >
                 ABOUT US
               </a>
               <a
-                href="#contact"
+                href="/contactus"
                 className="text-gray-500 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#caf6c4]"
               >
                 CONTACT US

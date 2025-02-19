@@ -5,7 +5,7 @@ import BusinessPartner from "./BusinessPartner";
 import BusinessSupport from "./BusinessSupport";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import img1 from "../assets/img/home1.jpg";
+import img1 from "../assets/img/home2.jpg";
 
 const BusinessLanding = () => {
   const [phone, setPhone] = useState("");
