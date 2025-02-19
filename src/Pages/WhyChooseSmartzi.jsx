@@ -28,7 +28,7 @@ const WhyChooseSmartzi = () => {
         <h2 className="text-center text-3xl md:text-4xl font-bold text-[#2d2760] mb-12">
           Why You Should Choose
           <br />
-          Smartzi
+          Fix My Ride
         </h2>
 
         {/* Cards Container */}
