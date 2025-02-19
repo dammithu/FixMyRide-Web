@@ -66,4 +66,4 @@ const DriverSignup = () => {
   );
 };
 
-export default DriverSignup;
+export default DriverSignup;

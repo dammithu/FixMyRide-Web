@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import car1 from "../assets/img/car1.png";
+import car2 from "../assets/img/car2.png";
+import car3 from "../assets/img/car3.jpg";
+import car4 from "../assets/img/car4.png";
 
 const TripBookingForm = () => {
   const [tripType, setTripType] = useState("one-way");
@@ -9,12 +13,12 @@ const TripBookingForm = () => {
   const [inboundLuggage, setInboundLuggage] = useState("None");
   const [showVehicles, setShowVehicles] = useState(false);
 
-  // Vehicle data
+  // Vehicle data with imported images
   const vehicles = [
     {
       id: 1,
       type: "4 Seater",
-      icon: "🚗",
+      image: car1,
       passengers: 4,
       luggage: 2,
       price: 420.99,
@@ -22,7 +26,7 @@ const TripBookingForm = () => {
     {
       id: 2,
       type: "6 Seater",
-      icon: "🚐",
+      image: car2,
       passengers: 6,
       luggage: 4,
       price: 620.99,
@@ -30,7 +34,7 @@ const TripBookingForm = () => {
     {
       id: 3,
       type: "8 Seater",
-      icon: "🚍",
+      image: car3,
       passengers: 8,
       luggage: 8,
       price: 1420.99,
@@ -38,7 +42,7 @@ const TripBookingForm = () => {
     {
       id: 4,
       type: "Luxury",
-      icon: "🏎️",
+      image: car4,
       passengers: 4,
       luggage: 2,
       price: 2220.99,
@@ -256,7 +260,11 @@ const TripBookingForm = () => {
                   className="flex items-center justify-between p-4 border-b last:border-b-0"
                 >
                   <div className="flex items-center">
-                    <div className="text-4xl mr-4">{vehicle.icon}</div>
+                    <img
+                      src={vehicle.image}
+                      alt={vehicle.type}
+                      className="w-30 h-20 object-cover rounded-lg mr-4"
+                    />
                     <div>
                       <p className="font-semibold">{vehicle.type}</p>
                     </div>
