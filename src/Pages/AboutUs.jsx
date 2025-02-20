@@ -3,6 +3,7 @@ import about1 from "../assets/img/about/about1.jpg";
 import about2 from "../assets/img/about/about2.jpg";
 import about3 from "../assets/img/about/about3.jpg";
 import home1 from "../assets/img/home1.jpg";
+import Gomobile from "../Pages/Gomobile"
 const AboutPage = () => {
   useEffect(() => {
     const observerCallback = (entries) => {
@@ -228,6 +229,7 @@ const AboutPage = () => {
           ))}
         </div>
       </div>
+      <Gomobile/>
     </div>
   );
 };

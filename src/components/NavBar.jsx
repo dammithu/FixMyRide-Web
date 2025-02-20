@@ -45,7 +45,7 @@ const Navbar = () => {
               AIRPORT TRANSFER
             </a>
             <a
-              href="/local"
+              href="/localtrip"
               className="text-gray-500 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#caf6c4]"
             >
               LOCAL TRIP
@@ -123,7 +123,7 @@ const Navbar = () => {
                 AIRPORT TRANSFER
               </a>
               <a
-                href="#local"
+                href="/localtrip"
                 className="text-gray-500 px-4 py-2 rounded-full transition-colors duration-300 hover:bg-[#caf6c4]"
               >
                 LOCAL TRIP

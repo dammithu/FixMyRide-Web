@@ -6,6 +6,7 @@ import Lorem from "./Lorem";
 import SignUpNav from "./SignUpNav";
 import Gomobile from "./Gomobile";
 import TripBookingForm from "../components/TripBookingForm";
+import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 const DriverSignup = () => {
   const [phone, setPhone] = React.useState("");
@@ -38,19 +39,53 @@ const DriverSignup = () => {
         {/* Content Container */}
         <div className="relative z-10 min-h-screen container mx-auto px-4">
           <div className="flex justify-between items-start pt-8">
-            {/* Left content */}
+            {/* Left content with airport booking banner */}
             <div className="text-white max-w-xl ml-20 p-10">
-              <h1 className="text-5xl font-bold mb-4">
-                Drive with Fix My Ride
-              </h1>
-              <h2 className="text-3xl font-semibold mb-6">
-                Make money on your schedule
-              </h2>
-              <p className="text-lg text-gray-200">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad
-              </p>
+              {/* Airport Booking Banner */}
+              <div className="mb-8">
+                <div className="text-left">
+                  {/* Banner text with proper spacing - line 1 */}
+                  <div className="mb-1">
+                    <span className="bg-green-500 text-white px-3 py-1 text-3xl font-bold inline-block">
+                      Plan your airport
+                    </span>
+                  </div>
+
+                  {/* Banner text with proper spacing - line 2 */}
+                  <div className="mb-4">
+                    <span className="bg-blue-600 text-white px-3 py-1 text-3xl font-bold inline-block">
+                      booking in advance
+                    </span>
+                  </div>
+
+                  <p className="text-lg font-medium mb-1">
+                    Professional, Reliable and Affordable
+                  </p>
+                  <p className="text-lg font-medium mb-4">
+                    Lowest Fixed Fares, No Cancellation Fees
+                  </p>
+
+                  {/* Transparent App Store Buttons */}
+                  <div className="flex space-x-3">
+                    <button className="flex items-center bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-md hover:bg-white/30 transition duration-300">
+                      <FaApple className="text-white mr-2 text-xl" />
+                      <div className="text-left">
+                        <div className="text-xs opacity-80">
+                          Download on the
+                        </div>
+                        <div className="text-sm font-semibold">App Store</div>
+                      </div>
+                    </button>
+                    <button className="flex items-center bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-md hover:bg-white/30 transition duration-300">
+                      <FaGooglePlay className="text-white mr-2 text-xl" />
+                      <div className="text-left">
+                        <div className="text-xs opacity-80">GET IT ON</div>
+                        <div className="text-sm font-semibold">Google Play</div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Right content - Trip Booking Form */}
@@ -68,4 +103,4 @@ const DriverSignup = () => {
   );
 };
 
-export default DriverSignup;
+export default DriverSignup;
