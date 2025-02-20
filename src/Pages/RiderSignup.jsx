@@ -33,18 +33,18 @@ const RiderSignup = () => {
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 min-h-screen container mx-auto px-4 flex items-center justify-between">
+        <div className="relative z-10 min-h-screen container mx-auto px-4 flex flex-col md:flex-row items-center justify-between py-10 md:py-0">
           {/* Left content */}
-          <div className="text-white max-w-xl pt-12 ml-20 p-10">
-            <h1 className="text-5xl font-bold mb-4">Our promise towards a safer everyday</h1>
-            <p className="text-lg text-gray-200">
+          <div className="text-white max-w-xl pt-12 md:ml-20 p-4 md:p-10 order-2 md:order-1 mt-10 md:mt-0 text-center md:text-left">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Our promise towards a safer everyday</h1>
+            <p className="text-base md:text-lg text-gray-200">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.
             </p>
           </div>
 
           {/* Right Form */}
-          <div className="bg-white rounded-2xl p-8 w-full max-w-md shadow-xl mr-16">
-            <form className="space-y-3 mr-5 ml-5" onSubmit={handleSubmit}>
+          <div className="bg-white rounded-2xl p-6 md:p-8 w-full max-w-md shadow-xl md:mr-16 order-1 md:order-2 mt-16 md:mt-0 mx-4 md:mx-0">
+            <form className="space-y-3 mx-2 md:mx-5" onSubmit={handleSubmit}>
               <input type="text" placeholder="First Name" className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm" />
               <input type="text" placeholder="Last Name" className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm" />
               <input type="email" placeholder="Email" className="w-full px-3 py-2 rounded-lg bg-gray-50 border-0 focus:ring-2 focus:ring-blue-500 text-sm" />

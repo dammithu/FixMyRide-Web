@@ -50,26 +50,26 @@ const LTTripBookingForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center p-4">
+    <div className="flex justify-center items-center p-2 sm:p-4">
       <div className="w-full max-w-md rounded-xl overflow-hidden bg-white">
         {/* Form Fields */}
-        <div className="p-4 space-y-4">
+        <div className="p-3 sm:p-4 space-y-3 sm:space-y-4">
           {/* Pickup and Drop-off */}
           <div className="relative">
             {/* Vertical connecting line */}
             <div className="absolute left-4 top-3 bottom-3 w-px bg-black"></div>
 
             {/* Pickup */}
-            <div className="flex items-center bg-[#caf7c5] rounded-full p-3 mb-5">
-              <div className="relative w-8 flex justify-center mr-2">
-                <div className="w-3 h-3 border border-black bg-white z-10"></div>
+            <div className="flex items-center bg-[#caf7c5] rounded-full p-2 sm:p-3 mb-4 sm:mb-5">
+              <div className="relative w-6 sm:w-8 flex justify-center mr-1 sm:mr-2">
+                <div className="w-2 h-2 sm:w-3 sm:h-3 border border-black bg-white z-10"></div>
               </div>
-              <div className="flex-grow flex items-center">
-                <div className="text-sm text-indigo-900 font-semibold whitespace-nowrap mr-2">
+              <div className="flex-grow flex items-center flex-wrap sm:flex-nowrap">
+                <div className="text-xs sm:text-sm text-indigo-900 font-semibold whitespace-nowrap mr-1 sm:mr-2">
                   PICKUP :
                 </div>
                 <input
-                  className="w-full bg-transparent border-none focus:outline-none placeholder-gray-400 text-sm rounded-full"
+                  className="w-full bg-transparent border-none focus:outline-none placeholder-gray-400 text-xs sm:text-sm rounded-full"
                   placeholder="Enter Pickup Location / Airport"
                 />
               </div>
@@ -80,17 +80,17 @@ const LTTripBookingForm = () => {
               {viaFields.map((_, index) => (
                 <div
                   key={index}
-                  className="flex items-center bg-[#caf7c5] rounded-full p-3 mb-5"
+                  className="flex items-center bg-[#caf7c5] rounded-full p-2 sm:p-3 mb-4 sm:mb-5"
                 >
-                  <div className="relative w-8 flex justify-center mr-2">
-                    <div className="w-3 h-3 border border-black bg-white z-10"></div>
+                  <div className="relative w-6 sm:w-8 flex justify-center mr-1 sm:mr-2">
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 border border-black bg-white z-10"></div>
                   </div>
-                  <div className="flex-grow flex items-center">
-                    <div className="text-sm text-indigo-900 font-semibold whitespace-nowrap mr-2">
+                  <div className="flex-grow flex items-center flex-wrap sm:flex-nowrap">
+                    <div className="text-xs sm:text-sm text-indigo-900 font-semibold whitespace-nowrap mr-1 sm:mr-2">
                       VIA :
                     </div>
                     <input
-                      className="w-full bg-transparent border-none focus:outline-none placeholder-gray-400 text-sm rounded-full"
+                      className="w-full bg-transparent border-none focus:outline-none placeholder-gray-400 text-xs sm:text-sm rounded-full"
                       placeholder="Enter Via Location"
                     />
                   </div>
@@ -99,9 +99,9 @@ const LTTripBookingForm = () => {
             </div>
 
             {/* Add Pickup/Drop-off Point Button */}
-            <div className="ml-10 mb-5">
+            <div className="ml-8 sm:ml-10 mb-3 sm:mb-5">
               <button
-                className="text-sm text-gray-500 px-1 py-0.5 text-left"
+                className="text-xs sm:text-sm text-gray-500 px-1 py-0.5 text-left"
                 onClick={() => setViaFields([...viaFields, ""])}
               >
                 Add a pickup / drop-off point
@@ -109,16 +109,16 @@ const LTTripBookingForm = () => {
             </div>
 
             {/* Drop-off */}
-            <div className="flex items-center bg-[#caf7c5] rounded-full p-3">
-              <div className="relative w-8 flex justify-center mr-2">
-                <div className="w-3 h-3 rounded-full border border-black bg-white z-10"></div>
+            <div className="flex items-center bg-[#caf7c5] rounded-full p-2 sm:p-3">
+              <div className="relative w-6 sm:w-8 flex justify-center mr-1 sm:mr-2">
+                <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full border border-black bg-white z-10"></div>
               </div>
-              <div className="flex-grow flex items-center">
-                <div className="text-sm text-indigo-900 font-semibold whitespace-nowrap mr-2">
+              <div className="flex-grow flex items-center flex-wrap sm:flex-nowrap">
+                <div className="text-xs sm:text-sm text-indigo-900 font-semibold whitespace-nowrap mr-1 sm:mr-2">
                   DROP-OFF :
                 </div>
                 <input
-                  className="w-full bg-transparent border-none focus:outline-none placeholder-gray-400 text-sm rounded-full"
+                  className="w-full bg-transparent border-none focus:outline-none placeholder-gray-400 text-xs sm:text-sm rounded-full"
                   placeholder="Enter Drop-off Location / Airport"
                 />
               </div>
@@ -126,11 +126,11 @@ const LTTripBookingForm = () => {
           </div>
 
           {/* Service Type Selection */}
-          <div className="mt-6 flex justify-center">
-            <div className="bg-gray-100 p-1 rounded-full w-48">
+          <div className="mt-4 sm:mt-6 flex justify-center">
+            <div className="bg-gray-100 p-1 rounded-full w-40 sm:w-48">
               <div className="flex">
                 <button
-                  className={`flex-1 py-1.5 text-sm rounded-full text-center transition-colors ${
+                  className={`flex-1 py-1 sm:py-1.5 text-xs sm:text-sm rounded-full text-center transition-colors ${
                     serviceType === "standard"
                       ? "bg-green-500 text-white"
                       : "text-gray-700"
@@ -140,7 +140,7 @@ const LTTripBookingForm = () => {
                   Standard
                 </button>
                 <button
-                  className={`flex-1 py-1.5 text-sm rounded-full text-center transition-colors ${
+                  className={`flex-1 py-1 sm:py-1.5 text-xs sm:text-sm rounded-full text-center transition-colors ${
                     serviceType === "luxury"
                       ? "bg-indigo-800 text-white"
                       : "text-gray-700"
@@ -153,9 +153,9 @@ const LTTripBookingForm = () => {
             </div>
           </div>
 
-          <div className="mt-6">
+          <div className="mt-4 sm:mt-6">
             <button
-              className="w-full bg-[#928eac] text-white py-3 rounded-lg font-medium hover:bg-[#008bde] transition-colors"
+              className="w-full bg-[#928eac] text-white py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium hover:bg-[#008bde] transition-colors"
               onClick={handleEstimateClick}
             >
               ESTIMATE
@@ -164,7 +164,7 @@ const LTTripBookingForm = () => {
 
           {/* Vehicle Selection Section */}
           <div
-            className={`mt-8 border rounded-lg overflow-hidden transition-all duration-700 ease-in-out ${
+            className={`mt-6 sm:mt-8 border rounded-lg overflow-hidden transition-all duration-700 ease-in-out ${
               showVehicles
                 ? "opacity-100 translate-y-0 max-h-[2000px]"
                 : "opacity-0 -translate-y-8 max-h-0"
@@ -173,7 +173,7 @@ const LTTripBookingForm = () => {
             {vehicles.map((vehicle) => (
               <div
                 key={vehicle.id}
-                className="flex items-center justify-between p-4 border-b last:border-b-0 opacity-0 animate-slideIn"
+                className="flex flex-col sm:flex-row sm:items-center justify-between p-3 sm:p-4 border-b last:border-b-0 opacity-0 animate-slideIn"
                 style={{
                   animation: showVehicles
                     ? "slideIn 0.8s ease-out forwards"
@@ -181,26 +181,26 @@ const LTTripBookingForm = () => {
                   animationDelay: `${vehicle.id * 200}ms`,
                 }}
               >
-                <div className="flex items-center">
+                <div className="flex items-center mb-2 sm:mb-0">
                   <img
                     src={vehicle.image}
                     alt={vehicle.type}
-                    className="w-30 h-20 object-cover rounded-lg mr-4"
+                    className="w-20 h-14 sm:w-30 sm:h-20 object-cover rounded-lg mr-3 sm:mr-4"
                   />
                   <div>
-                    <p className="font-semibold">{vehicle.type}</p>
+                    <p className="font-semibold text-sm sm:text-base">{vehicle.type}</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center justify-between sm:space-x-4 w-full sm:w-auto">
                   <div className="flex items-center">
-                    <span className="text-blue-500 mr-1">👤</span>
-                    <span>{vehicle.passengers}</span>
+                    <span className="text-blue-500 mr-1 text-sm">👤</span>
+                    <span className="text-sm">{vehicle.passengers}</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-blue-500 mr-1">🧳</span>
-                    <span>{vehicle.luggage}</span>
+                    <span className="text-blue-500 mr-1 text-sm">🧳</span>
+                    <span className="text-sm">{vehicle.luggage}</span>
                   </div>
-                  <div className="font-semibold">
+                  <div className="font-semibold text-sm sm:text-base">
                     £ {vehicle.price.toFixed(2)}
                   </div>
                 </div>
@@ -208,7 +208,7 @@ const LTTripBookingForm = () => {
             ))}
 
             <div
-              className={`p-4 transition-all duration-700 ${
+              className={`p-3 sm:p-4 transition-all duration-700 ${
                 showVehicles
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"
@@ -218,7 +218,7 @@ const LTTripBookingForm = () => {
               }}
             >
               <a href="/serviceselection">
-                <button className="w-full bg-[#008bde] text-white py-3 rounded-lg font-medium hover:bg-[#0077c2] transition-colors">
+                <button className="w-full bg-[#008bde] text-white py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium hover:bg-[#0077c2] transition-colors">
                   MAKE A BOOKING
                 </button>
               </a>

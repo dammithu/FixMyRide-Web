@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import visa from "../assets/img/visa.jpg";
@@ -8,6 +9,12 @@ import paypal from "../assets/img/paypal.jpg";
 const RegistrationForm = () => {
   const [isRegisterActive, setIsRegisterActive] = useState(true);
   const [phone, setPhone] = useState("");
+  const navigate = useNavigate();
+
+  const handleContinue = (e) => {
+    e.preventDefault();
+    navigate('/bookingsummary');
+  };
 
   const LoginForm = () => (
     <form className="space-y-6">
@@ -36,7 +43,7 @@ const RegistrationForm = () => {
         </a>
       </div>
 
-      <button className="w-full py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+      <button className="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
         LOGIN
       </button>
 
@@ -54,10 +61,9 @@ const RegistrationForm = () => {
   );
 
   const RegisterForm = () => (
-    <form className="space-y-8">
+    <form className="space-y-8" onSubmit={handleContinue}>
       <div className="space-y-6">
         <div>
-          {/* Updated header style to match image with line extending to the right */}
           <div className="flex items-center mb-6">
             <h2 className="text-xs font-medium uppercase tracking-wider text-gray-900 whitespace-nowrap mr-3">
               YOUR PERSONAL INFORMATION
@@ -81,7 +87,6 @@ const RegistrationForm = () => {
               className="w-full p-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             
-            {/* Phone input with country selector using react-phone-input-2 */}
             <div className="phone-input-container">
               <PhoneInput
                 country={"gb"}
@@ -105,7 +110,6 @@ const RegistrationForm = () => {
         </div>
 
         <div>
-          {/* Updated payment details header to match the same style */}
           <div className="mb-2">
             <div className="flex justify-between items-center mb-2">
               <div className="flex items-center flex-grow">
@@ -198,7 +202,10 @@ const RegistrationForm = () => {
         understood our Privacy Notice
       </div>
 
-      <button className="w-full py-3 bg-purple-600 text-white rounded-2xl hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+      <button 
+        type="submit"
+        className="w-full py-3 bg-blue-500 text-white rounded-2xl hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      >
         CONTINUE
       </button>
 
@@ -215,9 +222,7 @@ const RegistrationForm = () => {
     </form>
   );
 
-  // Custom CSS to style the phone input component to match form design
   useEffect(() => {
-    // Add custom CSS to style the phone input to match your form design
     const style = document.createElement('style');
     style.textContent = `
       .react-tel-input .form-control {

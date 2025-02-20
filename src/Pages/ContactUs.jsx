@@ -34,7 +34,7 @@ const ContactForm = () => {
     // Here you would typically send the data to your backend
   };
 
-  // Updated phone input styles to maintain design while enabling functionality
+  // Updated phone input styles with responsive adjustments
   const phoneInputStyles = `
     .react-tel-input {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -95,9 +95,16 @@ const ContactForm = () => {
       border: 1px solid #eaeaea;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       margin-top: 10px;
-      width: 300px;
+      width: 280px;
       max-height: 300px;
       overflow-y: auto;
+    }
+    
+    @media (max-width: 640px) {
+      .react-tel-input .country-list {
+        width: 260px;
+        left: 0;
+      }
     }
     
     .react-tel-input .country-list .country {
@@ -127,7 +134,20 @@ const ContactForm = () => {
       border-bottom: 1px solid #eaeaea;
     }
     
-    
+    @media (max-width: 640px) {
+      .react-tel-input .form-control {
+        font-size: 14px;
+        padding-left: 75px;
+      }
+      
+      .react-tel-input .selected-flag {
+        width: 55px;
+      }
+      
+      .react-tel-input .selected-flag .arrow {
+        left: 35px;
+      }
+    }
   `;
 
   return (
@@ -135,12 +155,12 @@ const ContactForm = () => {
       <div className="bg-gray-100 min-h-screen flex flex-col items-center">
         <style>{phoneInputStyles}</style>
 
-        <div className="max-w-3xl w-full p-6 mt-10">
-          <h2 className="text-2xl font-medium text-indigo-800 mb-6">
+        <div className="w-full max-w-3xl px-4 sm:px-6 p-4 sm:p-6 mt-6 sm:mt-10">
+          <h2 className="text-xl sm:text-2xl font-medium text-indigo-800 mb-4 sm:mb-6">
             CONTACT US
           </h2>
 
-          <div className="bg-white rounded-lg shadow-sm p-10 mt-10">
+          <div className="bg-white rounded-lg shadow-sm p-6 sm:p-10 mt-6 sm:mt-10">
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <input
@@ -220,10 +240,10 @@ const ContactForm = () => {
                 ></textarea>
               </div>
 
-              <div className="flex justify-start">
+              <div className="flex justify-center sm:justify-start">
                 <button
                   type="submit"
-                  className="px-36 py-3 text-white bg-blue-500 rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 uppercase font-medium"
+                  className="w-full sm:w-auto px-8 sm:px-36 py-3 text-white bg-blue-500 rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 uppercase font-medium text-sm sm:text-base"
                 >
                   Submit
                 </button>
@@ -231,36 +251,36 @@ const ContactForm = () => {
             </form>
           </div>
 
-          <div className="mt-16 pb-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="mt-8 sm:mt-16 pb-8 sm:pb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               <div>
-                <p className="text-gray-700 font-medium text-lg">
+                <p className="text-gray-700 font-medium text-base sm:text-lg">
                   Fix My Ride Limited
                 </p>
-                <p className="text-gray-600 font-medium text-lg">
+                <p className="text-gray-600 font-medium text-base sm:text-lg">
                   14 Elm Road, Chessington
                 </p>
-                <p className="text-gray-600 font-medium text-lg">KT91AW</p>
-                <p className="text-gray-600 font-medium text-lg mb-4">
+                <p className="text-gray-600 font-medium text-base sm:text-lg">KT91AW</p>
+                <p className="text-gray-600 font-medium text-base sm:text-lg mb-4">
                   United Kingdom
                 </p>
 
-                <p className="text-gray-500 text-sm">
+                <p className="text-gray-500 text-xs sm:text-sm">
                   Company Registration Number: 09261921
                 </p>
               </div>
 
               <div>
-                <div className="mb-6">
-                  <p className="text-gray-700 font-medium text-lg">Hot Line</p>
-                  <p className="text-gray-600 font-medium text-lg">
+                <div className="mb-4 sm:mb-6">
+                  <p className="text-gray-700 font-medium text-base sm:text-lg">Hot Line</p>
+                  <p className="text-gray-600 font-medium text-base sm:text-lg">
                     +44 3300252525
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-gray-700 font-medium text-lg">Email</p>
-                  <p className="text-gray-600 font-medium text-lg">
+                  <p className="text-gray-700 font-medium text-base sm:text-lg">Email</p>
+                  <p className="text-gray-600 font-medium text-base sm:text-lg break-words">
                     info@Fix My Ride.com
                   </p>
                 </div>

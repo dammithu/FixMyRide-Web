@@ -1,6 +1,7 @@
 import React from "react";
 import { Instagram, Twitter, Facebook } from "lucide-react";
 import logo from "../assets/img/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -49,7 +50,12 @@ const Footer = () => {
               <p>Airport Transfer</p>
               <p>Local Trips</p>
               <p>Contact Us</p>
-              <p>FAQ</p>
+              <p><Link 
+              to="/faq"
+              className="text-white hover:underline"
+              >
+              FAQ
+              </Link></p>
               <p>Support</p>
             </div>
             <div className="hidden md:block absolute right-0 -top-12 -bottom-8 w-px bg-gray-700"></div>
@@ -66,7 +72,14 @@ const Footer = () => {
               <p>About Fix My Ride</p>
               <p>Drive with Us</p>
               <p>Privacy Policy</p>
-              <p>Terms & Conditions</p>
+              <p>
+                <Link
+                  to="/termsandcondition"
+                  className="text-white hover:underline"
+                >
+                  Terms & Conditions
+                </Link>
+              </p>
               <p>Press Enquiries</p>
             </div>
           </div>

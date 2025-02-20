@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import img1 from "../assets/img/home2.jpg";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -11,11 +11,11 @@ import FAQSection from "./FAQSection";
 
 const DriverSignup = () => {
   const [phone, setPhone] = React.useState("");
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission
-    navigate("/pending"); // Redirect to /pending
+    e.preventDefault();
+    navigate("/pending");
   };
 
   return (
@@ -37,24 +37,24 @@ const DriverSignup = () => {
           />
         </div>
 
-        {/* Content Container */}
-        <div className="relative z-10 min-h-screen container mx-auto px-4 flex items-center justify-between">
-          {/* Left content */}
-          <div className="text-white max-w-xl pt-12 ml-20 p-10">
-            <h1 className="text-5xl font-bold mb-4">Drive with Fix My Ride</h1>
-            <h2 className="text-3xl font-semibold mb-6">
+        {/* Content Container - Made responsive */}
+        <div className="relative z-10 min-h-screen container mx-auto px-4 flex flex-col lg:flex-row items-center justify-center lg:justify-between py-8 lg:py-0">
+          {/* Left content - Made responsive */}
+          <div className="text-white max-w-xl pt-4 lg:pt-12 mx-4 lg:ml-20 p-4 lg:p-10 text-center lg:text-left mb-8 lg:mb-0">
+            <h1 className="text-3xl lg:text-5xl font-bold mb-2 lg:mb-4">Drive with Fix My Ride</h1>
+            <h2 className="text-xl lg:text-3xl font-semibold mb-3 lg:mb-6">
               Make money on your schedule
             </h2>
-            <p className="text-lg text-gray-200">
+            <p className="text-base lg:text-lg text-gray-200">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad
             </p>
           </div>
 
-          {/* Right Form */}
-          <div className="bg-white rounded-2xl p-8 w-full max-w-md shadow-xl mr-16">
-            <form className="space-y-3 mr-5 ml-5" onSubmit={handleSubmit}>
+          {/* Right Form - Made responsive */}
+          <div className="bg-white rounded-2xl p-4 lg:p-8 w-full max-w-md shadow-xl mx-4 lg:mr-16">
+            <form className="space-y-3 mx-2 lg:mx-5" onSubmit={handleSubmit}>
               <input
                 type="text"
                 placeholder="First Name"

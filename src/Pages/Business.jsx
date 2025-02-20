@@ -36,24 +36,24 @@ const BusinessLanding = () => {
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 min-h-screen container mx-auto px-4 flex items-center justify-between">
+        <div className="relative z-10 min-h-screen container mx-auto px-4 flex flex-col md:flex-row items-center justify-between py-8">
           {/* Left content */}
-          <div className="text-white max-w-xl pt-12 ml-20 p-10">
-            <h1 className="text-5xl font-bold mb-4">
+          <div className="text-white max-w-xl pt-8 md:pt-12 px-4 md:px-10 md:ml-0 lg:ml-20 w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
               Fix My Ride for Business
             </h1>
-            <h2 className="text-3xl font-semibold mb-6">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6">
               Reliable rides for your employees
             </h2>
-            <p className="text-lg text-gray-200">
+            <p className="text-base lg:text-lg text-gray-200">
               Simplified management for you. Professional service and dedicated
               support for your business travel needs.
             </p>
           </div>
 
           {/* Right Form */}
-          <div className="bg-white rounded-2xl p-8 w-full max-w-md shadow-xl mr-16">
-            <form className="space-y-3 mr-5 ml-5">
+          <div className="bg-white rounded-2xl p-4 md:p-6 lg:p-8 w-full md:w-1/2 max-w-md shadow-xl mx-auto md:mr-4 lg:mr-16">
+            <form className="space-y-3 mx-2 md:mx-5">
               <input
                 type="text"
                 placeholder="Company Name"
@@ -112,7 +112,7 @@ const BusinessLanding = () => {
 
               <button
                 type="submit"
-                className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition mt-4 text-sm"
+                className="w-full bg-blue-500 text-white py-2 md:py-3 rounded-lg font-semibold hover:bg-blue-600 transition mt-4 text-sm"
               >
                 GET STARTED
               </button>
