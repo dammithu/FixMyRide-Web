@@ -18,9 +18,10 @@ import LTTripBooking from "./components/LTTripBooking";
 import LTServiceSelection from "./Pages/LTServiceSelection";
 import LocalTrip from "./Pages/LocalTrip";
 import Registerorlogin from "./Pages/Registerorlogin";
-import PaymentDetails from "./Pages/PaymentDetails"
-import Success from "./Pages/Success"
-import Pending from "./Pages/Pending"
+import PaymentDetails from "./Pages/PaymentDetails";
+import Success from "./Pages/Success";
+import Pending from "./Pages/Pending";
+import MyAccount from "./Pages/MyAccount";
 
 function App() {
   return (
@@ -39,10 +40,11 @@ function App() {
         <Route path="/serviceselection" element={<ServiceSelection />} />
         <Route path="/localtrip" element={<LocalTrip />} />
         <Route path="/ltserviceselection" element={<LTServiceSelection />} />
-        <Route path="/registerorlogin" element={<Registerorlogin/>}/>
-        <Route path="/payment" element={<PaymentDetails/>}/>
-        <Route path="/success" element={<Success/>}/>
-        <Route path="/pending" element={<Pending/>}/>
+        <Route path="/registerorlogin" element={<Registerorlogin />} />
+        <Route path="/payment" element={<PaymentDetails />} />
+        <Route path="/success" element={<Success />} />
+        <Route path="/pending" element={<Pending />} />
+        <Route path="/myaccount" element={<MyAccount />} />
       </Routes>
       <Footer />
     </Router>
