@@ -32,7 +32,7 @@ const Footer = () => {
             <div className="pl-10 space-y-1">
               <p>+44 3300525525</p>
               <p>info@Fix My Ride.com</p>
-              <p>Smartzi Limited</p>
+              <p>Fix My Ride Limited</p>
               <p>14 Elm Rd, Chessington</p>
               <p>KT91AW UK</p>
             </div>
@@ -50,12 +50,11 @@ const Footer = () => {
               <p>Airport Transfer</p>
               <p>Local Trips</p>
               <p>Contact Us</p>
-              <p><Link 
-              to="/faq"
-              className="text-white hover:underline"
-              >
-              FAQ
-              </Link></p>
+              <p>
+                <Link to="/faq" className="text-white hover:underline">
+                  FAQ
+                </Link>
+              </p>
               <p>Support</p>
             </div>
             <div className="hidden md:block absolute right-0 -top-12 -bottom-8 w-px bg-gray-700"></div>
