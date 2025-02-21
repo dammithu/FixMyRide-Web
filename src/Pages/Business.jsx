@@ -12,7 +12,7 @@ const BusinessLanding = () => {
 
   return (
     <div>
-      <div className="min-h-screen relative overflow-hidden">
+      <div className="min-h-screen relative overflow-hidden ">
         {/* Background with full image and dark angled bottom */}
         <div className="absolute inset-0 z-0">
           {/* Full image background */}

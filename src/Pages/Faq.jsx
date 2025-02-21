@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Search } from "lucide-react";
-import img1 from "../assets/img/home2.jpg"
+import img1 from "../assets/img/home2.jpg";
 
 const FAQPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -9,7 +9,7 @@ const FAQPage = () => {
   const faqs = [
     {
       id: 1,
-      question: "What is Smartzi?",
+      question: "What is Fix My Ride?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
@@ -49,7 +49,7 @@ const FAQPage = () => {
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <h1 className="text-3xl font-semibold text-white mb-8">
-            SMARTZI FAQ
+            Fix My Ride FAQ
           </h1>
           <div className="relative w-[600px] max-w-full mx-4">
             <div className="flex">
@@ -76,7 +76,7 @@ const FAQPage = () => {
             <nav className="space-y-2">
               <div className="text-green-500">General</div>
               <div className="text-blue-500 cursor-pointer">
-                Smartzi Account
+                Fix My Ride Account
               </div>
               <div className="text-blue-500 cursor-pointer">Pre-booking</div>
               <div className="text-blue-500 cursor-pointer">Cancellation</div>

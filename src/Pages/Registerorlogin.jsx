@@ -13,14 +13,14 @@ const RegistrationForm = () => {
 
   const handleContinue = (e) => {
     e.preventDefault();
-    navigate('/bookingsummary');
+    navigate("/bookingsummary");
   };
 
   const LoginForm = () => (
     <form className="space-y-6">
       <div className="text-center">
         <h2 className="text-xl font-semibold text-gray-900 mb-8">
-          Welcome Back To Smartzi
+          Welcome Back To Fix My Ride
         </h2>
       </div>
 
@@ -86,7 +86,7 @@ const RegistrationForm = () => {
               placeholder="Enter your email address"
               className="w-full p-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            
+
             <div className="phone-input-container">
               <PhoneInput
                 country={"gb"}
@@ -95,7 +95,8 @@ const RegistrationForm = () => {
                 inputProps={{
                   name: "phone",
                   required: true,
-                  className: "w-full p-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className:
+                    "w-full p-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500",
                 }}
                 containerClass="w-full"
                 buttonClass="border border-gray-200 rounded-l-2xl hover:bg-gray-50"
@@ -202,7 +203,7 @@ const RegistrationForm = () => {
         understood our Privacy Notice
       </div>
 
-      <button 
+      <button
         type="submit"
         className="w-full py-3 bg-blue-500 text-white rounded-2xl hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
       >
@@ -223,7 +224,7 @@ const RegistrationForm = () => {
   );
 
   useEffect(() => {
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.textContent = `
       .react-tel-input .form-control {
         width: 100% !important;

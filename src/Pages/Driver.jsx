@@ -41,7 +41,9 @@ const DriverSignup = () => {
         <div className="relative z-10 min-h-screen container mx-auto px-4 flex flex-col lg:flex-row items-center justify-center lg:justify-between py-8 lg:py-0">
           {/* Left content - Made responsive */}
           <div className="text-white max-w-xl pt-4 lg:pt-12 mx-4 lg:ml-20 p-4 lg:p-10 text-center lg:text-left mb-8 lg:mb-0">
-            <h1 className="text-3xl lg:text-5xl font-bold mb-2 lg:mb-4">Drive with Fix My Ride</h1>
+            <h1 className="text-3xl lg:text-5xl font-bold mb-2 lg:mb-4">
+              Drive with Fix My Ride
+            </h1>
             <h2 className="text-xl lg:text-3xl font-semibold mb-3 lg:mb-6">
               Make money on your schedule
             </h2>
